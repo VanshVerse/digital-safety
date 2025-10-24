@@ -1,0 +1,275 @@
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #0077cc;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 5px solid #005fa3;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+} 
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  background-color: #005fa3;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #003d73;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+}
+
+section {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #0077cc;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: "✅ ";
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Forms */
+form {
+  margin-top: 15px;
+}
+
+input[type="text"] {
+  padding: 8px;
+  width: 60%;
+  border: 2px solid #0077cc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #0077cc;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+/* Footer */
+footer {
+  background-color: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-top: 5px solid #005fa3;
+}
+
+/* Quiz Styling */
+input[type="radio"] {
+  margin-right: 8px;
+}
+
+/* Checklist */
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Links in Scam Game */
+a {
+  color: #0077cc;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #005fa3;
+  text-decoration: none;
+}
+
+/* Shake animation for warning icon */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.warning-icon {
+  display: inline-block;
+  animation: shake 1s infinite;
+}
+
+/* Fade animation for emoji */
+@keyframes fadeEmoji {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+.emoji {
+  font-size: 40px;
+  animation: fadeEmoji 2s infinite;
+}
+
+/* Pulse animation for shield */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.shield {
+  font-size: 30px;
+  animation: pulse 1.5s infinite;
+}
+
+/* Stylish Headings */
+h2, h3 {
+  font-family: 'Segoe UI', sans-serif;
+  color: #0077cc;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Highlighted phrases */
+.highlight {
+  font-weight: bold;
+  color: #d32f2f;
+  background-color: #fff3cd;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Animated emoji */
+@keyframes fadeEmoji {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+.emoji {
+  font-size: 40px;
+  animation: fadeEmoji 2s infinite;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+ @keyframes bounceIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+h2, h3 {
+  animation: bounceIn 3s ease-out;
+}
+
+
+
+
+
+
+
+body {
+  animation: fadeInPage 1s ease-in;
+}
+
+@keyframes fadeInPage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+h1, h2, h3 {
+  animation: slideFade 1s ease-out;
+  font-family: 'Segoe UI', sans-serif;
+  color: #0077cc;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@keyframes slideFade {
+  0% { transform: translateY(-20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+p {
+  animation: zoomInText 0.8s ease-in-out;
+}
+
+@keyframes zoomInText {
+  0% { transform: scale(0.95); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+section {
+  animation: slideInSection 1s ease-in-out;
+}
+
+@keyframes slideInSection {
+  from { transform: translateX(-30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.emoji {
+  font-size: 40px;
+  animation: fadeEmoji 2s infinite;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeEmoji {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+h1 {
+  font-size: 32px;
+  color: #ffc62b;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
