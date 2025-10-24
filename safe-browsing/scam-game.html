@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Spot the Scam Game</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body {
+      animation: fadeInPage 1s ease-in;
+    }
+
+    @keyframes fadeInPage {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+     h2 {
+      font-family: 'Segoe UI', sans-serif;
+      color: #c62828;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      animation: slideFade 1s ease-out;
+    }
+
+    @keyframes slideFade {
+      0% { transform: translateY(-20px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    .scenario {
+      background-color: #fff3e0;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #d32f2f;
+    }
+
+    button {
+      padding: 8px 12px;
+      margin: 5px;
+      background-color: #ef5350;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎮 Spot the Scam Game</h1>
+  </header>
+
+  <nav>
+    <a href="../index.html">🏠 Home</a>
+    <a href="what-is-safe.html">Intro</a>
+    <a href="tips.html">Tips</a>
+    <a href="browser-settings.html">Browser Settings</a>
+    <a href="scam-game.html">Scam Game</a>
+    <a href="dashboard.html">Dashboard</a>
+  </nav>
+
+  <main>
+   <b> <section>
+      <h2>Can You Spot the Scam?</h2>
+
+      <div class="scenario">
+        <p><span class="highlight">Scenario 1:</span> You get a message saying “🎁 You’ve won ₹10,000! Click here to claim your prize.”</p>
+        <button onclick="alert('Correct! This is a scam. Never click unknown links.')">Scam</button>
+        <button onclick="alert('Oops! This is actually a scam. Be careful with prize messages.')">Safe</button>
+      </div>
+
+      <div class="scenario">
+        <p><span class="highlight">Scenario 2:</span> Your school sends an email asking you to update your password using the school website.</p>
+        <button onclick="alert('Correct! This is safe if it’s from a trusted source.')">Safe</button>
+        <button onclick="alert('Oops! This is safe if it’s from your school.')">Scam</button>
+      </div>
+
+      <div class="scenario">
+        <p><span class="highlight">Scenario 3:</span> A stranger sends you a friend request and says “I’m your cousin from Delhi. Let’s chat!”</p>
+        <button onclick="alert('Correct! This is suspicious. Don’t accept unknown requests.')">Scam</button>
+        <button onclick="alert('Oops! This could be a scam. Be careful with strangers.')">Safe</button>
+      </div>
+
+      <div class="scenario">
+        <p><span class="highlight">Scenario 4:</span> A pop-up says “Your device is infected! Download this app now!”</p>
+        <button onclick="alert('Correct! This is a scam. Never trust pop-ups.')">Scam</button>
+        <button onclick="alert('Oops! This is a scam. Don’t download unknown apps.')">Safe</button>
+      </div>
+
+      <p><strong>Well done!</strong> You’ve learned how to spot scams. Stay alert and protect your data. 🛡️</p>
+    </section>
+  </main></b>
+
+  <footer>
+    <p>Made by Vansh for Class 10 CBSE – 2025</p>
+  </footer>
+</body>
+</html>

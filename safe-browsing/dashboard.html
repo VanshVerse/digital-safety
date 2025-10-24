@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Safe Browsing Dashboard</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body {
+      animation: fadeInPage 1s ease-in;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+
+     h2 {
+      color: #0277bd;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .dashboard {
+      background-color: #e1f5fe;
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px dashed #0288d1;
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #d32f2f;
+      background-color: #fff3cd;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    #checkBtn {
+      margin-top: 20px;
+      padding: 10px 18px;
+      background-color: #0288d1;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📊 Student Safety Dashboard</h1>
+  </header>
+
+  <nav>
+    <a href="../index.html">🏠 Home</a>
+    <a href="what-is-safe.html">Intro</a>
+    <a href="tips.html">Tips</a>
+    <a href="browser-settings.html">Browser Settings</a>
+    <a href="scam-game.html">Scam Game</a>
+    <a href="dashboard.html">Dashboard</a>
+  </nav>
+<b>
+  <main>
+    <section>
+      <h2>Track Your Safe Browsing Habits</h2>
+      <div class="dashboard">
+        <label><input type="checkbox" class="safety-check" /> I used a secure website (https)</label>
+        <label><input type="checkbox" class="safety-check" /> I avoided clicking unknown links</label>
+        <label><input type="checkbox" class="safety-check" /> I updated my browser today</label>
+        <label><input type="checkbox" class="safety-check" /> I used strong passwords</label>
+        <label><input type="checkbox" class="safety-check" /> I logged out from shared devices</label>
+        <label><input type="checkbox" class="safety-check" /> I reported suspicious messages</label>
+        <label><input type="checkbox" class="safety-check" /> I checked my privacy settings</label>
+
+        <button id="checkBtn">✅ Check How Safe You Are</button>
+        <div id="result"></div>
+      </div>
+    </section>
+  </main>
+</b>
+  <footer>
+    <p>Made by Vansh for Class 10 CBSE – 2025</p>
+  </footer>
+
+  <script>
+    document.getElementById("checkBtn").addEventListener("click", function () {
+      const checks = document.querySelectorAll(".safety-check");
+      let count = 0;
+      checks.forEach((box) => {
+        if (box.checked) count++;
+      });
+
+      const result = document.getElementById("result");
+      if (count === 7) {
+        result.textContent = "🎉 Congratulations! You're a Digital Safety Champion!";
+      } else if (count >= 4) {
+        result.textContent = "👍 Great job! You're on the path to safe browsing.";
+      } else if (count >= 2) {
+        result.textContent = "⚠️ You're getting there! Try to follow more safety tips.";
+      } else {
+        result.textContent = "🚨 Be careful! Start applying safety habits today.";
+      }
+    });
+  </script>
+</body>
+</html>
